@@ -1,5 +1,18 @@
 local awful = require("awful")
 local wibox = require("wibox")
+local gears = require("gears")
+
+local function activateTasklist(c)
+  c:emit_signal(
+    "request::activate",
+    "tasklist",
+    {raise = true}
+  )
+end
+
+local tasklistButtons = gears.table.join(
+  awful.button({ }, 1, function (c) activateTasklist(c) end)
+)
 
 local function clientFilter(i)
   return function(client, screen)
@@ -44,7 +57,7 @@ return function(cfg, tagIndex)
         self:get_children_by_id("clienticon")[1].client = c
       end,
     },
-    buttons = require("my.buttons.tasklist"),
+    buttons = tasklistButtons,
   }
 
 end

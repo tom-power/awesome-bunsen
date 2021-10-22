@@ -1,5 +1,11 @@
 local awful = require("awful")
 local wibox = require("wibox")
+local gears = require("gears")
+
+local taglistButtons = gears.table.join(
+  awful.button({ }, 1, function(t) t:view_only() end),
+  awful.button({ }, 3, function () mymainmenu:toggle() end)
+)
 
 return function(config, tasklist, tagWidth)
   local cfg = config or {}
@@ -27,6 +33,6 @@ return function(config, tasklist, tagWidth)
         self:get_children_by_id("tasklist_placeholder")[1]:add(tasklist(cfg, index))
       end,
     },
-    buttons = require("my.buttons.taglist"),
+    buttons = taglistButtons,
   }
 end
