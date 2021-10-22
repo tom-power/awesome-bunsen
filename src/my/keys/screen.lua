@@ -13,8 +13,8 @@ return gears.table.join(
   awful.key({ alt, meta, shift }, "Down", moveToscreenNext),
   awful.key({ alt, meta, hyper, shift }, "j", moveToscreenNext),
 
-  awful.key({ alt, meta }, "up", screenPrev),
+  awful.key({ alt, meta }, "Up", screenPrev),
   awful.key({ alt, meta, hyper }, "k", screenPrev),
-  awful.key({ alt, meta, shift }, "Up", moveToscreenNext),
-  awful.key({ alt, meta, hyper, shift }, "k", moveToscreenNext)
+  awful.key({ alt, meta, shift }, "Up", moveToscreenPrev),
+  awful.key({ alt, meta, hyper, shift }, "k", moveToscreenPrev)
 )
