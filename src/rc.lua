@@ -60,12 +60,14 @@ root.buttons(require("my.buttons.root"))
 -- }}}
 
 -- {{{ Key bindings
+local cyclefocus = require("my.cyclefocus")
+
 globalkeys = gears.table.join(
   require("my.keys.root"),
   require("my.keys.tagNav"),
-  require("my.keys.cycleFocus"),
   require("my.keys.screen"),
-  require("my.keys.programs")
+  require("my.keys.programs"),
+  cyclefocus.cycleAll
 )
 
 -- Set keys
@@ -73,6 +75,11 @@ root.keys(globalkeys)
 -- }}}
 
 -- {{{ Rules
+clientkeys = gears.table.join(
+  require("my.keys.client"),
+  cyclefocus.cycleCurrentTag
+)
+
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
   -- All clients will match this rule.
@@ -82,7 +89,7 @@ awful.rules.rules = {
       focus = awful.client.focus.filter,
       raise = true,
       size_hints_honor = false,
-      keys = require("my.keys.client"),
+      keys = clientkeys,
       buttons = require("my.buttons.client"),
       screen = awful.screen.preferred,
       placement = awful.placement.no_overlap + awful.placement.no_offscreen
