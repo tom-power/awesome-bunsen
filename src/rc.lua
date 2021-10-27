@@ -60,14 +60,14 @@ root.buttons(require("my.buttons.root"))
 -- }}}
 
 -- {{{ Key bindings
-local cyclefocus = require("my.cyclefocus")
+local cyclefocusKeys = require("my.keys.cyclefocus")
 
 globalkeys = gears.table.join(
   require("my.keys.root"),
   require("my.keys.tagNav"),
   require("my.keys.screen"),
   require("my.keys.programs"),
-  cyclefocus.cycleAll
+  cyclefocusKeys.cycleAll
 )
 
 -- Set keys
@@ -77,7 +77,7 @@ root.keys(globalkeys)
 -- {{{ Rules
 clientkeys = gears.table.join(
   require("my.keys.client"),
-  cyclefocus.cycleCurrentTag
+  cyclefocusKeys.cycleCurrentTag
 )
 
 -- Rules to apply to new clients (through the "manage" signal).
