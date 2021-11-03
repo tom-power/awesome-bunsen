@@ -15,13 +15,13 @@ theme.font          = "DejaVu Sans Mono normal 10"
 
 theme.bg_normal     = "#000000"
 theme.bg_focus      = "#346077"
--- theme.bg_urgent     = "#ff0000"
+theme.bg_urgent     = "#000000"
 theme.bg_minimize   = "#40474A"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#d3dae3"
 theme.fg_focus      = "#ffffff"
--- theme.fg_urgent     = "#ffffff"
+theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#9AABB3"
 
 theme.useless_gap   = dpi(4)
