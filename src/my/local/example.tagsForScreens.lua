@@ -1,6 +1,6 @@
 return {
-    {
-      names = { "1", "2" },
-      layouts = { lo[1], lo[1] },
-    }
+  {
+    names = { "1", "2" },
+    layouts = { lo[1], lo[1] },
+  }
 }

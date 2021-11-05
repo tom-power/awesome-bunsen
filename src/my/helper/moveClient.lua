@@ -13,13 +13,13 @@ end
 local moveClient = {}
 
 function moveClient.toPrevTag()
-    awful.client.movetotag(tagAtIndex(currentTag().name - 1))
-    awful.tag.viewprev()
+  awful.client.movetotag(tagAtIndex(currentTag().name - 1))
+  awful.tag.viewprev()
 end
 
 function moveClient.toNextTag()
-    awful.client.movetotag(tagAtIndex(currentTag().name + 1))
-    awful.tag.viewnext()
+  awful.client.movetotag(tagAtIndex(currentTag().name + 1))
+  awful.tag.viewnext()
 end
 
 return moveClient
