@@ -84,7 +84,8 @@ clientkeys = gears.table.join(
 awful.rules.rules = {
   -- All clients will match this rule.
   { rule = { },
-    properties = { border_width = 1,
+    properties = {
+      border_width = 1,
       border_color = beautiful.border_normal,
       focus = awful.client.focus.filter,
       raise = true,
