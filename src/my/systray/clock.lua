@@ -14,7 +14,7 @@ local timeCentred = {
 
 local date = {
   widget = wibox.widget.textclock,
-  format = "%d/%m/%y",
+  format = "%a %d %b",
   font = "DejaVu Sans Mono normal 6"
 }
 
