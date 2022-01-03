@@ -2,7 +2,7 @@ local awful = require("awful")
 local wibox = require("wibox")
 
 lo = awful.layout.layouts
-local myTagsForScreens = require("my.local.tagsForScreens")
+local myTagsForScreens = require("my.screens.tagsForScreens")
 
 return function(s)
   require("my.wallpaper")(s)
